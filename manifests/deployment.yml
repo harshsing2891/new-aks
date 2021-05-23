@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: harshsingnewaks 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: harshsingnewaks
+  template:
+    metadata:
+      labels:
+        app: harshsingnewaks 
+    spec:
+      containers:
+        - name: harshsingnewaks 
+          image: aksbuiild.azurecr.io/harshsingnewaks
+          ports:
+          - containerPort: 80
